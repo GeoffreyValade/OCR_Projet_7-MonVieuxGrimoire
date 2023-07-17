@@ -1,7 +1,5 @@
 const express = require('express');
-// Import d'express
 const router = express.Router();
-// Création d'une application express
 const userCtrl = require('../controllers/user');
 
 
