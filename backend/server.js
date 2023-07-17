@@ -14,6 +14,9 @@ const normalizePort = val => {
 };
 const port = normalizePort('4000');
 app.set('port', port);
+// On utilise ici le port 4000 pour écouter le backend, car le frontend et le backend ne peuvent pas être sur le même port
+// On s'assure donc avec les lignes ci-dessus que le backend se loggera sur le port 4000, et le frontend pourra se logger sur le port 3000 par défaut
+
 
 const errorHandler = error => {
   if (error.syscall !== 'listen') {
