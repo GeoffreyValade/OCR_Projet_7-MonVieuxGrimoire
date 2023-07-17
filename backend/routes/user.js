@@ -3,14 +3,6 @@ const router = express.Router();
 const userCtrl = require('../controllers/user');
 
 
-//          Travail sur le projet :
-//              Les routes :
-//  ATTENTION ! Une requête réceptionnée doit toujours avoir une réponse (res.status(201)) !
-
-//  Les routes ci-dessous sont simplifiées => ce qui nous permet de les voir clairement
-//  On retrouve les détails dans 'backend/controllers/stuff.js'
-
-
 //  --------- Route pour la l'inscription ---------
 router.post('/signup', userCtrl.signup);
 
