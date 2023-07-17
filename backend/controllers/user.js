@@ -69,39 +69,3 @@ exports.login = (req, res, next) => {
 // Sinon, on va demander à bcrypt de comparer le mdp rentré et celui qui est associé à l'email du user ciblé
 // S'il n'est pas correspondant, on renvoie une erreur
 // Si il correspond, on renvoie une id et un token
-
-
-
-
-
-
-
-
-
-
-
-// ------------ Cours ------------
-
-
-//  Ci-dessous, un exemple de logique de route simple :
-//  Je peux envoyer une requête POST à http://localhost:4000/api/auth/signup
-//  Je vais recevoir une réponse "Objet créé !"
-//  Plusieurs types de routes possibles :
-//      - 'router.post(), (req, res, next) => ...
-//      - 'router.get(), ...
-//      - 'router.delete(), ...
-//      - 'router.use(), ...
-
-
-/*
-
-exports.login = (req, res, next) => {
-    console.log(req.body);
-    res.status(201).json({
-        message: 'Connexion réussie !'
-    });
-    next();
-};
-
-*/
-
