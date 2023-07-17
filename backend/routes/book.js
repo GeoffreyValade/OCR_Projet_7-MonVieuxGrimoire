@@ -27,7 +27,6 @@ router.get('/:id', bookCtrl.getTargetBook);
 
 
 
-
 //               --------- POST ---------
 
 //  --------- Poster un nouveau livre ---------
@@ -35,9 +34,6 @@ router.post('/', auth, multer.upload.single('image'), multer.resizeAndSaveImage,
 
 //  --------- Donner une note à un livre ---------
 router.post('/:id/rating', auth, bookCtrl.postTargetBookRate)
-
-
-// ( PENSER A GERER L'AUTHENTIFICATION AVEC ('/:id/rating', auth, bookCtrl.postTargetBookRate) )
 
 
 
