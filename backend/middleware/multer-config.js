@@ -1,9 +1,7 @@
-// Le code est obsolète: 
-// Ce fonctionnement nous propose de stocker directement l'image avec multer.diskStorage, ce qui sauvegarde en local
-// Nous, nous voulons maintenant passer l'image dans le memoryStorage afin d'avoir un buffer (une mémoire tampon)
-// Avec ce buffer, sharp pourra récupérer l'image et la compresser selon notre envie
-// Sharp se chargera ensuite de sauvegarder l'image dans le dossier indiqué
-//  https://www.youtube.com/watch?v=n-AuBy-z4_A
+// Fonctionnement : on va stocker l'image avec multer.memoryStorage, ce qui sauvegarde l'image dans la RAM
+// Pour récupérer l'image, on passe par le buffer du fichier
+// En passant le buffer en argument de sharp, on récupère l'image et on peut ensuite lui appliquer une fonction resize, et passer les arguments
+// Ensuite on enregistre le fichier reshape avec un .toFile et on passe le chemin de sauvegarde en argument
 
 const multer = require('multer');
 const sharp = require('sharp');
