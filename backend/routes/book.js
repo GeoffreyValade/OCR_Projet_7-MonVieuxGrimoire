@@ -10,8 +10,9 @@ const multer = require('../middleware/multer-config')
 //  ATTENTION ! Une requête réceptionnée doit toujours avoir une réponse (res.status(201)) !
 
 //  Les routes ci-dessous sont simplifiées => ce qui nous permet de les voir clairement
-//  On retrouve les détails dans 'backend/controllers/stuff.js'
+//  On retrouve les détails des contrôleurs dans 'backend/controllers/stuff.js'
 
+// Les routes sont préfixées grâce à la ligne suivante dans le fichier /backend/app.js : "app.use('/api/books', bookRoutes)";
 
 //               --------- GET ---------
 
