@@ -63,33 +63,4 @@ module.exports = router;
 // Export de l'application pour utilisation sur d'autres fichiers
 // Notre fichier 'server.js' contient 'const app = require('./app');'. Donc sans export, server.js ne fonctionne pas correctement
 
-// AUTHENTIFICATION :   C'est ici que l'on utilise le middleware auth, 
-//                      afin de s'assurer que l'utilisateur est autorisé à accéder aux API.
-
-
-
-
-
-
-
-
-//------------------------------------------------
-//COURS CI-DESSOUS
-/*router.use((req, res, next) => {
-    console.log('Requête reçu !');
-    next();
-});
-
-router.use((req, res, next) => {
-    res.status(201);
-    next();
-});
-
-router.use((req, res, next) => {
-    res.json({ message : 'Votre requête a bien été reçue !'});
-    next();
-});
-
-router.use((req, res) => {
-    console.log('Réponse envoyée avec succès !');
-});*/
+// AUTHENTIFICATION :   avec le middleware auth au début de chaque route, on s'assure que l'utilisateur est autorisé à accéder aux API.
