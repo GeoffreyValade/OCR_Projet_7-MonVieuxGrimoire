@@ -111,12 +111,6 @@ exports.updateTargetBook = (req, res, next) => {
 };
 
 
-//  --------- Mise à jour d'un livre ---------
-
-
-
-
-
 
 //               --------- DELETE ---------
 
