@@ -45,7 +45,6 @@ exports.postNewBook = (req, res, next) => {
   const bookObject = JSON.parse(req.body.book);
   delete bookObject._id;
   delete bookObject._userId;
-  console.log('file', req.file);
   const timestamp = Date.now();
   const book = new Book({
     ...bookObject,
