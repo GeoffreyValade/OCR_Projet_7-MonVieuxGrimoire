@@ -43,9 +43,9 @@ router.post('/:id/rating', auth, bookCtrl.postTargetBookRate)
 //               --------- PUT ---------
 
 //  --------- Mise à jour d'un livre ---------
-router.put('/:id', auth, bookCtrl.updateTargetBook);
+router.put('/:id', auth, multer.upload.single('image'), multer.resizeAndSaveImage, bookCtrl.updateTargetBook);
 
-
+//      Correction : Ajout des middlewares multer pour stockage et traitement de la nouvelle image
 
 
 
