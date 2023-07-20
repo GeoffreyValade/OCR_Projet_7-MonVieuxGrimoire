@@ -105,6 +105,12 @@ exports.postTargetBookRate = (req, res, next) => {
 
 //  --------- Mise à jour d'un livre ---------
 exports.updateTargetBook = (req, res, next) => {
+      // Correction : Vérification d'une présence de fichier image dans la requête
+    if (req.file) {
+      // Correction : Si une nouvelle image est incluse alors on insère imageUrl avec nouvel URL, qui sera mis à jour dans la BDD
+      req.body.imageUrl = `${req.protocol}://${req.get('host')}/images/${req.file.filename}`;
+    }
+  
   Book.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
     .then(() => res.status(200).json({ message: 'Objet modifié !' }))
     .catch(error => res.status(400).json({ error }));
